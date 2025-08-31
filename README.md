@@ -39,7 +39,7 @@ This project was developed as an academic assignment to demonstrate full-stack d
 ## 🚀 Installation & Setup
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/construction-website.git
+   https://github.com/laviena2003-ux/construction-and-cost-estimator.git
 2.Move the project folder(estimator&booking) to your local server directory (e.g., htdocs for XAMPP).
 
 3.start XAMPP:open XAMPP control panal start:Apache,MySQL
