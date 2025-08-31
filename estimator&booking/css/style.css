@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+  background: #f9fdf7; /* soft white-green background */
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background: #075218; /* vibrant green */
+  padding: 20px 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+}
+.logo span {
+  color: #c4f0a4;
+}
+nav a {
+  color: #fff;
+  margin-left: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+nav a:hover, nav a.active {
+  color: #c4f0a4;
+  transform: scale(1.1);
+}
+nav a.btn-register {
+  background: #c4f0a4;
+  color: #2add53;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+nav a.btn-register:hover {
+  background: #a1e07c;
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: left;
+  padding: 150px 20px;
+  color: #05300f;
+  border-radius: 0 0 50px 50px;
+  overflow: hidden;
+
+  /* Half radiant green overlay + image */
+  background-image: 
+    linear-gradient(to right, rgba(19, 143, 48, 0.98) 50%, rgba(229, 236, 230, 0) 100%), 
+    url('https://img.freepik.com/premium-vector/my-role-i-perform-comprehensive-management-processes-related-construction-permits_764382-27994.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+/* Hero Content */
+.hero-content {
+  max-width: 600px;
+  margin-left: 50px;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.4);
+  animation: fadeInUp 1s ease forwards;
+}
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+  animation: fadeInUp 1.3s ease forwards;
+}
+.btn-primary {
+  background: #c4f0a4;
+  color: #28a745;
+  padding: 16px 40px;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(40,167,69,0.4);
+  transition: all 0.3s ease;
+  animation: fadeInUp 1.6s ease forwards;
+}
+.btn-primary:hover {
+  background: #a1e07c;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(40,167,69,0.6);
+  transform: translateY(-5px);
+}
+
+/* Floating emojis in Hero */
+.hero::before, .hero::after {
+  content: "🏗️";
+  position: absolute;
+  font-size: 3rem;
+  opacity: 0.3;
+  animation: float 6s ease-in-out infinite alternate;
+}
+.hero::before { top: 40px; left: 10%; }
+.hero::after { bottom: 50px; right: 15%; }
+
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-20px) rotate(360deg); }
+}
+
+/* Services Section */
+.services {
+  padding: 70px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  background: #f0fff4;
+  border-radius: 20px;
+  margin: 50px auto;
+}
+.services h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #28a745;
+  margin-bottom: 40px;
+}
+.service-box {
+  flex: 1 1 280px;
+  background: #e0f8d8;
+  padding: 30px 20px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(40,167,69,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.service-box:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(40,167,69,0.3);
+}
+.service-box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #28a745;
+}
+.service-box p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background: #28a745;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 40px;
+  border-radius: 15px 15px 0 0;
+}
+
+/* Responsive */
+@media(max-width:980px){
+  .services { flex-direction: column; padding:50px 15px;}
+}
+@media(max-width:600px){
+  .hero-content h1{ font-size:2rem;}
+  .hero-content p{ font-size:1rem;}
+  .btn-primary{ padding:12px 28px; font-size:1rem;}
+  nav a{ margin-left:10px; font-size:0.9rem;}
+}
